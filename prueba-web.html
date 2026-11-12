@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Capataz · HIGER STUDIO (maqueta)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#f6f3ec;--ink:#1d2320;--muted:#5d665f;--line:#ddd6c8;--green:#1f5c3f;--green-2:#2f7a56;--card:#fffdf8;--warn:#b5651d}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--green)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+.banner{background:#efe4cf;color:#6b4a14;font-size:13px;text-align:center;padding:6px 16px}
+header{display:flex;justify-content:space-between;align-items:center;padding:20px 0}
+.logo{font-family:Fraunces,serif;font-weight:650;font-size:22px;letter-spacing:.2px}
+.logo small{display:block;font:500 11px Inter,sans-serif;color:var(--muted);letter-spacing:1.5px;text-transform:uppercase}
+.lang button{border:1px solid var(--line);background:transparent;padding:6px 10px;border-radius:999px;font:500 13px Inter;cursor:pointer;color:var(--muted)}
+.lang button.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;padding:40px 0 70px}
+h1,h2{font-family:Fraunces,serif;font-weight:650;line-height:1.12;margin:0 0 16px}
+h1{font-size:clamp(34px,5vw,56px)}
+h2{font-size:clamp(26px,3.2vw,36px)}
+.lead{font-size:18px;color:#39413c;max-width:34em}
+.cta{display:inline-block;background:var(--green);color:#fff;text-decoration:none;font-weight:600;padding:14px 22px;border-radius:10px;margin-top:10px}
+.cta:hover{background:var(--green-2)}
+.note{font-size:14px;color:var(--muted);margin-top:10px}
+.demo{position:relative;min-height:420px}
+.phone{position:absolute;left:0;top:0;width:250px;background:#e7ecef;border-radius:28px;padding:14px;border:8px solid #1d2320;box-shadow:0 20px 40px rgba(0,0,0,.15)}
+.msg{background:#fff;border-radius:12px;padding:8px 10px;font-size:13px;margin:8px 0 8px 30px}
+.msg.me{background:#dff3d8;margin:8px 0 8px 30px}
+.msg.bot{margin:8px 30px 8px 0}
+.msg .ph{height:70px;border-radius:8px;background:linear-gradient(135deg,#b9a98d,#7d8a7f)}
+.voice{display:flex;gap:6px;align-items:center}.voice i{display:block;width:3px;background:#5a8f6c;border-radius:2px}
+.doc{position:absolute;right:0;top:70px;width:270px;background:#fff;border:1px solid var(--line);border-radius:6px;padding:18px;box-shadow:0 14px 30px rgba(0,0,0,.10);font-size:11px}
+.doc .hd{display:flex;justify-content:space-between;border-bottom:2px solid var(--ink);padding-bottom:6px;margin-bottom:8px;font-weight:600}
+.doc .row{height:6px;background:#e9e5dc;border-radius:3px;margin:6px 0}
+.doc .ph2{display:flex;gap:6px;margin-top:10px}.doc .ph2 div{flex:1;height:54px;background:linear-gradient(135deg,#c2b59c,#8c998e);border-radius:3px}
+section{padding:64px 0;border-top:1px solid var(--line)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:26px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
+.num{font-family:Fraunces,serif;font-size:30px;color:var(--green)}
+.card h3{margin:6px 0 6px;font-size:18px}
+.card p{margin:0;color:#46504a}
+.why{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:26px}
+.why div{padding:6px 0 0 14px;border-left:3px solid var(--green)}
+.why b{display:block;margin-bottom:4px}
+.price{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:26px}
+.price .card .p{font-family:Fraunces,serif;font-size:34px;margin:6px 0}
+.price .card .p span{font:500 14px Inter;color:var(--muted)}
+.price .card.hl{border:2px solid var(--green)}
+.founders{margin-top:20px;background:#e6efe8;border-radius:12px;padding:16px 18px}
+.tag{display:inline-block;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--warn);font-weight:600}
+details{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin:10px 0}
+summary{cursor:pointer;font-weight:600}
+.final{text-align:center;padding:80px 0}
+footer{padding:26px 0 40px;color:var(--muted);font-size:13px;border-top:1px solid var(--line)}
+[data-l="en"]{display:none}
+html[lang="en"] [data-l="es"]{display:none}
+html[lang="en"] [data-l="en"]{display:revert}
+@media (max-width:860px){.hero{grid-template-columns:1fr}.demo{min-height:400px}.steps,.why,.price{grid-template-columns:1fr}}
+@media (max-width:420px){.phone{width:210px}.doc{width:210px;top:120px}}
+</style>
+</head>
+<body>
+<div class="banner"><span data-l="es">Maqueta de prueba · textos y precios pendientes de aprobar</span><span data-l="en">Test mock-up · copy and prices pending approval</span></div>
+<div class="wrap">
+<header>
+ <div class="logo">Capataz<small>HIGER STUDIO</small></div>
+ <div class="lang"><button id="b-es" class="on" onclick="setL('es')">ES</button> <button id="b-en" onclick="setL('en')">EN</button></div>
+</header>
+
+<div class="hero">
+ <div>
+  <h1><span data-l="es">El acta de obra, hecha antes de llegar al coche.</span><span data-l="en">Your site report, done before you reach the car.</span></h1>
+  <p class="lead"><span data-l="es">Durante la visita mandas fotos, notas de voz y textos a Capataz por Telegram. Al terminar, el acta está en Word, con tu formato, en la carpeta de la obra de tu Drive.</span><span data-l="en">During the visit, send photos, voice notes and texts to Capataz on Telegram. When you finish, the report is in Word, in your own format, in the project folder of your Google Drive.</span></p>
+  <a class="cta" href="#probar"><span data-l="es">Quiero probarlo</span><span data-l="en">I want to try it</span></a>
+  <p class="note"><span data-l="es">Sin instalar nada. Tus actas y tus fotos se quedan en tu Drive.</span><span data-l="en">Nothing to install. Your reports and photos stay in your Drive.</span></p>
+ </div>
+ <div class="demo" aria-hidden="true">
+  <div class="phone">
+   <div class="msg me">/obras</div>
+   <div class="msg bot"><span data-l="es">📂 Visita abierta: Vivienda en Jaizkibel</span><span data-l="en">📂 Visit started: House in Jaizkibel</span></div>
+   <div class="msg me"><div class="ph"></div></div>
+   <div class="msg me voice">▶ <i style="height:8px"></i><i style="height:14px"></i><i style="height:10px"></i><i style="height:18px"></i><i style="height:9px"></i><i style="height:13px"></i> 0:42</div>
+   <div class="msg me">/fin</div>
+   <div class="msg bot"><span data-l="es">✅ Acta 12 lista en tu Drive</span><span data-l="en">✅ Report 12 ready in your Drive</span></div>
+  </div>
+  <div class="doc">
+   <div class="hd"><span data-l="es">ACTA DE VISITA Nº 12</span><span data-l="en">SITE VISIT REPORT 12</span><span>.docx</span></div>
+   <div class="row" style="width:70%"></div><div class="row"></div><div class="row" style="width:85%"></div>
+   <div class="row" style="width:60%"></div><div class="row"></div>
+   <div class="ph2"><div></div><div></div></div>
+  </div>
+ </div>
+</div>
+
+<section>
+ <h2><span data-l="es">El problema</span><span data-l="en">The problem</span></h2>
+ <p class="lead"><span data-l="es">Un acta de visita lleva 30-40 minutos de oficina: pasar notas, ordenar fotos, numerar, archivar y enviar. Muchas se quedan sin hacer.</span><span data-l="en">A site visit report takes 30-40 minutes back at the office: typing up notes, sorting photos, numbering, filing and sending. Many never get written.</span></p>
+</section>
+
+<section>
+ <h2><span data-l="es">Cómo funciona</span><span data-l="en">How it works</span></h2>
+ <div class="steps">
+  <div class="card"><div class="num">1</div><h3><span data-l="es">Abre la visita</span><span data-l="en">Start the visit</span></h3><p><span data-l="es">Escribe /obras en el grupo de Telegram y elige la obra.</span><span data-l="en">Type /obras in your Telegram group and pick the project.</span></p></div>
+  <div class="card"><div class="num">2</div><h3><span data-l="es">Habla y haz fotos</span><span data-l="en">Talk and take photos</span></h3><p><span data-l="es">Cuenta lo que ves como se lo contarías a un compañero. Manda las fotos de cada zona.</span><span data-l="en">Describe what you see as you would to a colleague. Send the photos of each area.</span></p></div>
+  <div class="card"><div class="num">3</div><h3><span data-l="es">Cierra con /fin</span><span data-l="en">Finish with /fin</span></h3><p><span data-l="es">Capataz redacta el acta con tus palabras, sin inventar nada, y la guarda en Word. La revisas y la envías con /enviar.</span><span data-l="en">Capataz writes the report in your words, without making anything up, and saves it in Word. Review it and send it with /enviar.</span></p></div>
+ </div>
+</section>
+
+<section>
+ <h2><span data-l="es">Por qué Capataz</span><span data-l="en">Why Capataz</span></h2>
+ <div class="why">
+  <div><b><span data-l="es">Tu formato</span><span data-l="en">Your format</span></b><span data-l="es">Tu membrete, tu plantilla y tus apartados. No es un PDF genérico.</span><span data-l="en">Your letterhead, your template and your sections. Not a generic PDF.</span></div>
+  <div><b><span data-l="es">Tu Drive</span><span data-l="en">Your Drive</span></b><span data-l="es">El acta y las fotos se quedan en tu cuenta de Google. Capataz solo toca las carpetas que crea.</span><span data-l="en">Reports and photos stay in your Google account. Capataz only touches the folders it creates.</span></div>
+  <div><b><span data-l="es">Sin apps nuevas</span><span data-l="en">No new apps</span></b><span data-l="es">Funciona en Telegram, en el móvil que ya llevas.</span><span data-l="en">It works in Telegram, on the phone you already carry.</span></div>
+  <div><b><span data-l="es">Nada inventado</span><span data-l="en">Nothing made up</span></b><span data-l="es">Si algo no se dijo, el acta no lo lleva. Lo dudoso sale marcado.</span><span data-l="en">If it was not said, it is not in the report. Anything unclear is flagged.</span></div>
+  <div><b><span data-l="es">Memoria de la obra</span><span data-l="en">Project memory</span></b><span data-l="es">/pendientes te recuerda lo que quedó por hacer en las últimas visitas.</span><span data-l="en">/pendientes reminds you of open items from the last visits.</span></div>
+  <div><b><span data-l="es">Envío con acuse</span><span data-l="en">Sent with receipt</span></b><span data-l="es">/enviar manda el PDF a los asistentes y te dice quién no ha confirmado.</span><span data-l="en">/enviar emails the PDF to attendees and tells you who has not confirmed.</span></div>
+ </div>
+</section>
+
+<section>
+ <span class="tag"><span data-l="es">Propuesta</span><span data-l="en">Proposal</span></span>
+ <h2><span data-l="es">Precios</span><span data-l="en">Pricing</span></h2>
+ <div class="price">
+  <div class="card"><b><span data-l="es">Estudio</span><span data-l="en">Studio</span></b><div class="p">49 € <span data-l="es">/mes + IVA</span><span data-l="en">/month + VAT</span></div><p><span data-l="es">Un arquitecto o un estudio pequeño.</span><span data-l="en">One architect or a small practice.</span></p></div>
+  <div class="card hl"><b><span data-l="es">Equipo</span><span data-l="en">Team</span></b><div class="p">89 € <span data-l="es">/mes + IVA</span><span data-l="en">/month + VAT</span></div><p><span data-l="es">Varios técnicos en el mismo estudio.</span><span data-l="en">Several professionals in the same practice.</span></p></div>
+  <div class="card"><b><span data-l="es">Implantación</span><span data-l="en">Setup</span></b><div class="p">390 € <span data-l="es">una vez</span><span data-l="en">one-off</span></div><p><span data-l="es">Tu plantilla con tu membrete, tus obras dadas de alta y una sesión de puesta en marcha.</span><span data-l="en">Your template with your letterhead, your projects loaded and a kick-off session.</span></p></div>
+ </div>
+ <div class="founders"><b><span data-l="es">Plan Fundadores.</span><span data-l="en">Founders plan.</span></b> <span data-l="es">Los primeros estudios entran con un piloto de 3 meses al 50 % y criterios de éxito acordados. Si no te ahorra tiempo, lo dejas y tus actas siguen en tu Drive.</span><span data-l="en">The first practices join with a 3-month pilot at 50 % and agreed success criteria. If it does not save you time, you leave and your reports stay in your Drive.</span></div>
+</section>
+
+<section>
+ <h2><span data-l="es">Preguntas frecuentes</span><span data-l="en">FAQ</span></h2>
+ <details><summary><span data-l="es">¿Tengo que instalar algo?</span><span data-l="en">Do I need to install anything?</span></summary><p><span data-l="es">No. Capataz es un bot de Telegram que se añade al grupo del estudio.</span><span data-l="en">No. Capataz is a Telegram bot you add to your practice's group.</span></p></details>
+ <details><summary><span data-l="es">¿Dónde se guardan mis datos?</span><span data-l="en">Where is my data stored?</span></summary><p><span data-l="es">Las actas, las fotos y el registro de visitas, en tu Google Drive. Las notas de voz se pasan a texto; el audio no se copia a tu Drive.</span><span data-l="en">Reports, photos and the visit log, in your Google Drive. Voice notes are turned into text; the audio is not copied to your Drive.</span></p></details>
+ <details><summary><span data-l="es">¿Y si el acta no me gusta?</span><span data-l="en">What if I do not like the report?</span></summary><p><span data-l="es">Es un Word: lo cambias como cualquier documento. Capataz aprende las palabras que corriges.</span><span data-l="en">It is a Word file: edit it like any document. Capataz learns the words you correct.</span></p></details>
+ <details><summary><span data-l="es">¿En qué idiomas?</span><span data-l="en">Which languages?</span></summary><p><span data-l="es">El acta sale en castellano o en inglés. Los nombres propios se escriben como tú los dices.</span><span data-l="en">Reports in Spanish or English. Names are written the way you say them.</span></p></details>
+ <details><summary><span data-l="es">¿Para quién es?</span><span data-l="en">Who is it for?</span></summary><p><span data-l="es">Estudios de arquitectura, aparejadores en dirección de ejecución y coordinadores de seguridad y salud.</span><span data-l="en">Architecture practices, site supervisors and health and safety coordinators.</span></p></details>
+</section>
+
+<section class="final" id="probar">
+ <h2><span data-l="es">Prueba Capataz en tu próxima visita.</span><span data-l="en">Try Capataz on your next site visit.</span></h2>
+ <a class="cta" href="#probar" onclick="alert(document.documentElement.lang==='en'?'Mock-up: the sign-up form is not connected yet.':'Maqueta: el formulario de alta aún no está conectado.');return false;"><span data-l="es">Quiero probarlo</span><span data-l="en">I want to try it</span></a>
+</section>
+
+<footer>
+ <span data-l="es">Capataz es un producto de HIGER STUDIO · Hondarribia (Gipuzkoa) · <a href="privacidad.html">Privacidad</a> · Aviso legal (pendiente)</span>
+ <span data-l="en">Capataz is a HIGER STUDIO product · Hondarribia (Basque Country, Spain) · <a href="privacidad.html">Privacy</a> · Legal notice (pending)</span>
+</footer>
+</div>
+<script>
+function setL(l){document.documentElement.lang=l;document.getElementById('b-es').classList.toggle('on',l==='es');document.getElementById('b-en').classList.toggle('on',l==='en');try{localStorage.setItem('capataz_lang',l)}catch(e){}}
+(function(){var l='es';try{l=localStorage.getItem('capataz_lang')||((navigator.language||'es').slice(0,2)==='en'?'en':'es')}catch(e){}setL(l)})();
+</script>
+</body>
+</html>
